@@ -1,4 +1,5 @@
-﻿using System.Web.Routing;
+﻿
+using Microsoft.AspNetCore.Routing;
 
 namespace DevTrends.MvcDonutCaching
 {
@@ -26,7 +27,7 @@ namespace DevTrends.MvcDonutCaching
         /// <param name="actionName">The name of the controller action method.</param>
         /// <param name="routeValues">A dictionary that contains the parameters for a route.</param>
         void RemoveItem(string controllerName, string actionName, RouteValueDictionary routeValues);
-        
+
         /// <summary>
         /// Implementations should remove all output cache entries.
         /// </summary>

@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿
+using Microsoft.AspNetCore.Mvc;
 
 namespace DevTrends.MvcDonutCaching
 {
@@ -12,7 +13,7 @@ namespace DevTrends.MvcDonutCaching
         /// <param name="options">The output cache options.</param>
         /// <returns>A donut hole wrapper free string</returns>
         string RemoveDonutHoleWrappers(string content, ControllerContext filterContext, OutputCacheOptions options);
-        
+
         /// <summary>
         /// Replaces the donut holes content of with fresh content.
         /// </summary>

@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿
+using Microsoft.AspNetCore.Http;
 
 namespace DevTrends.MvcDonutCaching
 {
@@ -9,6 +10,6 @@ namespace DevTrends.MvcDonutCaching
         /// </summary>
         /// <param name="response">The HTTP response.</param>
         /// <param name="settings">The cache settings.</param>
-        void SetCacheHeaders(HttpResponseBase response, CacheSettings settings);
+        void SetCacheHeaders(HttpResponse response, CacheSettings settings);
     }
 }

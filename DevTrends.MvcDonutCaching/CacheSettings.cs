@@ -1,5 +1,4 @@
-﻿using System.Web.UI;
-
+﻿
 namespace DevTrends.MvcDonutCaching
 {
     public class CacheSettings

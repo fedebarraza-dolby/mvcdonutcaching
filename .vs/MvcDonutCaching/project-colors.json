@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "854e90c7-8320-4eb6-a286-24a8ee5ebe9b": {
+      "ProjectGuid": "854e90c7-8320-4eb6-a286-24a8ee5ebe9b",
+      "DisplayName": "MvcDonutCaching",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

@@ -1,9 +1,10 @@
 ﻿using System;
 using System.IO;
 using System.Text.RegularExpressions;
-using System.Web.Mvc;
-using System.Web.Mvc.Html;
-using System.Web.Routing;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.AspNetCore.Routing;
 
 namespace DevTrends.MvcDonutCaching
 {
@@ -25,9 +26,7 @@ namespace DevTrends.MvcDonutCaching
 
         public string RemoveDonutHoleWrappers(string content, ControllerContext filterContext, OutputCacheOptions options)
         {
-            if (
-                filterContext.IsChildAction &&
-                (options & OutputCacheOptions.ReplaceDonutsInChildActions) != OutputCacheOptions.ReplaceDonutsInChildActions)
+            if ((options & OutputCacheOptions.ReplaceDonutsInChildActions) != OutputCacheOptions.ReplaceDonutsInChildActions)
             {
                 return content;
             }
@@ -37,9 +36,7 @@ namespace DevTrends.MvcDonutCaching
 
         public string ReplaceDonutHoleContent(string content, ControllerContext filterContext, OutputCacheOptions options)
         {
-            if (
-                filterContext.IsChildAction &&
-                (options & OutputCacheOptions.ReplaceDonutsInChildActions) != OutputCacheOptions.ReplaceDonutsInChildActions)
+            if ((options & OutputCacheOptions.ReplaceDonutsInChildActions) != OutputCacheOptions.ReplaceDonutsInChildActions)
             {
                 return content;
             }
@@ -49,7 +46,7 @@ namespace DevTrends.MvcDonutCaching
                 var actionSettings = _actionSettingsSerialiser.Deserialise(match.Groups[1].Value);
 
                 return InvokeAction(
-                    filterContext.Controller,
+                    filterContext.,
                     actionSettings.ActionName,
                     actionSettings.ControllerName,
                     actionSettings.RouteValues
@@ -62,7 +59,7 @@ namespace DevTrends.MvcDonutCaching
             var viewContext = new ViewContext(
                 controller.ControllerContext,
                 new WebFormView(controller.ControllerContext, "tmp"),
-                controller.ViewData,
+                controller.,
                 controller.TempData,
                 TextWriter.Null
             );

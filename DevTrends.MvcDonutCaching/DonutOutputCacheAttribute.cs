@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Globalization;
 using System.IO;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.UI;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace DevTrends.MvcDonutCaching
 {

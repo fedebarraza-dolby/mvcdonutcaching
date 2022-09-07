@@ -1,5 +1,4 @@
 ﻿using System.Configuration;
-using System.Web.Configuration;
 
 namespace DevTrends.MvcDonutCaching
 {
@@ -15,8 +14,8 @@ namespace DevTrends.MvcDonutCaching
         /// Implementation should return an output cache profile for the asked <see cref="cacheProfileName"/>.
         /// </summary>
         /// <param name="cacheProfileName">Name of the cache profile.</param>
-        /// <returns>A <see cref="OutputCacheProfile"/> instance.</returns>
-        OutputCacheProfile RetrieveOutputCacheProfile(string cacheProfileName);
+        /// <returns>A <see cref="OutputCache"/> instance.</returns>
+        OutputCache RetrieveOutputCacheProfile(string cacheProfileName);
 
         /// <summary>
         /// Implementation should return a value indicating whether caching is globally enabled.

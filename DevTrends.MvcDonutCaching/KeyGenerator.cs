@@ -2,9 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Routing;
+using DevTrends.MvcDonutCaching;
 
 namespace DevTrends.MvcDonutCaching
 {
@@ -150,7 +148,7 @@ namespace DevTrends.MvcDonutCaching
             {
                 // If there is an existing route value with the same key as varybycustom, we should overwrite it
                 routeValues[cacheSettings.VaryByCustom.ToLowerInvariant()] =
-                            context.HttpContext.ApplicationInstance.GetVaryByCustomString(HttpContext.Current, cacheSettings.VaryByCustom);
+                            context.HttpContext.ApplicationInstance.GetVaryByCustomString(HttpContextHelper.Current, cacheSettings.VaryByCustom);
             }
 
             if (!string.IsNullOrEmpty(cacheSettings.VaryByHeader))

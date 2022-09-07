@@ -1,5 +1,4 @@
 ﻿using System.Text;
-using System.Web.Security;
 
 namespace DevTrends.MvcDonutCaching
 {

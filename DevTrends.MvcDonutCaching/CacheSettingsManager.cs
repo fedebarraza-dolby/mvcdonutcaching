@@ -2,8 +2,6 @@
 using System.Configuration;
 using System.Diagnostics;
 using System.Security;
-using System.Web;
-using System.Web.Configuration;
 
 namespace DevTrends.MvcDonutCaching
 {
